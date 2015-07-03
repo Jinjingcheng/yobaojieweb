@@ -1,0 +1,42 @@
+1.common
+  footer.html            尾部
+  header.html            头部
+  menu.html              二级菜单
+
+2.fund
+  accountRecharge.html   资金充值
+  accountWithdrawal.html 资金提现
+  financRecord.html      资金记录
+
+3.help  
+  aboutus.html           关于我们
+  guidelines.html        新手指引
+  helpcenter.html        帮助中心
+  insurance.html         安全保障
+
+4.loan
+  details.html           标详情
+  list.html              标列表
+  transferDetails.html   债权转让标详情
+  transferList.html      债权转让标列表
+  myInvest.html          理财管理-》投资项目
+  myTransfer.html        理财管理-》债权转让（转入）
+  myTransferInvest.html  理财管理-》债权转让（转出）
+  myInvestRepay.html     理财管理-》回款计划
+  myLoan.html            借款管理-》我的借款
+  myLoanRepay.html       借款管理-》还款明细
+  myRepaySet.html        借款管理-》还款设置touzi
+
+5.promote
+  bonus.html             红包
+  invite.html            推广（好友邀请）
+
+6.user
+  accountBasic.html      账户概览
+  accountSet.html        账户设置
+  login.html             登录
+  register.html          注册
+  repassword.html        找回密码
+  message.html           消息中心
+
+7.home.html

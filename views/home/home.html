@@ -1,0 +1,616 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link type="text/css" rel="stylesheet" href="../../css/reset.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/style.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/home/home.css" />
+	<script src="../../js/jquery/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			var w=$(window).width(),
+			h=$(window).height(),
+			nav_h=$('.top_nav').height(),
+			num=0,
+			list=0,
+			listH=$('.notice_box a').height();
+			timer=null,
+			timer2=null,
+			len=$('.banner li').length*2;
+			// $('.banner_box').height(h-nav_h);
+			// $('.banner').width(len*w).height(h-nav_h);
+			$('.banner').width(len*w);
+			// $('.banner li').width(w).height(h-nav_h);
+			$('.banner li').width(w);
+			// $('.left,.right').height(h-nav_h);
+			
+			$('.banner .banner_copy').html($('.banner ul').html());
+			
+			$('.left').click(function(){
+				if(num==len/2){
+					$('.banner').css('left','0px');
+					num=1;
+					$('.banner').stop().animate({
+						left:-num*w+'px'
+					},1000)
+				}else{
+					num++;
+					$('.banner').stop().animate({
+						left:-num*w+'px'
+					},1000)
+				}
+			})
+			
+			$('.right').click(function(){
+				if(num==0){
+					$('.banner').css('left',-3*w);
+					num=2;
+					$('.banner').animate({
+						left:-num*w+'px'
+					},1000)
+				}else{
+					num--;
+					$('.banner').animate({
+						left:-num*w+'px'
+					},1000)
+				}
+			})
+
+			$('.banner,.left,.right').mouseover(function(){
+				clearInterval(timer);
+			})
+			$('.banner,.left,.right').mouseout(function(){
+				autoplay();
+			})
+			autoplay();
+			function autoplay(){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					if(num==len/2){
+						$('.banner').css('left','0px');
+						num=0;
+					}else{
+						num++;
+						$('.banner').animate({
+							left:-num*w+'px'
+						},1000)
+					}
+				},3000)
+			}
+			
+			$('.intr img').mouseover(function(){
+				$(this).stop().animate({marginTop:'-20px'},500);
+			}).mouseout(function(){
+				$(this).stop().animate({marginTop:'0px'},500);
+			})
+
+			$('.list_copy').html($('.notice_list').html())
+			list_auto();
+			function list_auto(){
+				timer2=setInterval(function(){
+					if(list==5){
+						$('.notice_box').css('top','0px');
+						list=1;
+						$('.notice_box').animate({
+							top:-list*listH+'px',
+						})
+					}else{
+						list++;
+						$('.notice_box').animate({
+							top:-list*listH+'px',
+						})
+					}
+				},1000)
+			}
+		})
+	</script>
+</head>
+<body style="height: 3000px;">
+	<div class="top_nav">
+		<a href="javascript:;" class="logo"><img src='../../images/page/logo.jpg'></a>
+		<ul>
+			<li><a href="javascript:;">首页</a></li>
+			<li><a href="javascript:;">投资列表</a></li>
+			<li><a href="javascript:;">安全保障</a></li>
+			<li><a href="javascript:;">新手指引</a></li>
+		</ul>
+		<div class="login_regis">
+			<a href="javascript:;" class="login">登录</a>
+			<a href="javascript:;" class="regis">注册</a>
+		</div>
+	</div>
+	<div class="banner_box">
+		<div class="left"></div>
+		<div class="banner hiddenCon">
+			<ul>
+				<li><img src="../../images/page/banner1.jpg"></li>
+				<li><img src="../../images/page/banner2.jpg"></li>
+				<li><img src="../../images/page/banner3.jpg"></li>
+			</ul>
+			<ul class="banner_copy">	
+			</ul>
+		</div>
+		<div class="right"></div>
+	</div>
+	<div class="content">
+		<div class="notice">
+			<div class="notice_box">
+				<div class="notice_list">
+					<a href="javascript:;">【平台公告】2015年端午节假期提现与还款安排   1</a>
+					<a href="javascript:;">【平台公告】2015年端午节假期提现与还款安排   2</a>
+					<a href="javascript:;">【平台公告】2015年端午节假期提现与还款安排   3</a>
+					<a href="javascript:;">【平台公告】2015年端午节假期提现与还款安排   4</a>
+					<a href="javascript:;">【平台公告】2015年端午节假期提现与还款安排   5</a>
+				</div>
+				<div class="list_copy"></div>
+			</div>
+		</div>
+		<div class="Income_inves">
+			<div class="Income fl">
+				<h1>投资人累计投资金额<span class="font14">（元）</span></h1>
+				<p>¥  2,523,244,878</p>
+			</div>
+			<div class="inves fl">
+				<h1>为投资人带来总收益<span class="font14">（元）</span></h1>
+				<p>¥  2,523,87</p>
+			</div>
+		</div>
+		<div class="title_box mt135">
+			<h2>为什么要来有宝街</h2>
+		</div>
+		<div class="ybj_video">
+			<div class="ybj fl">
+				<h3>有宝街</h3>
+				<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字。</p>
+				<a href="javascript:;">了解详情</a>
+			</div>
+			<div class="video fr"></div>
+		</div>
+		<div class="intr">
+			<ul>
+				<li>
+					<div class="intr_img"><img src="../../images/page/zg_icon.png" /></div>
+					<h4>站岗资金有收益</h4>
+					<p>平台余额收益年化5%</p>
+				</li>
+				<li>
+					<div class="intr_img"><img src="../../images/page/pt_icon.png" /></div>
+					<h4>平台安全有保障</h4>
+					<p>新浪支付资金托管</p>
+				</li>
+				<li>
+					<div class="intr_img"><img src="../../images/page/tz_icon.png" /></div>
+					<h4>投资全程无费用</h4>
+					<p>不收取用户任何手续费</p>
+				</li>
+				<li>
+					<div class="intr_img"><img src="../../images/page/xm_icon.png" /></div>
+					<h4>项目稳健高透明</h4>
+					<p>筛选优质项目收益稳健</p>
+				</li>
+			</ul>
+			<div style="clear:both; zoom: 1;"></div>
+		</div>
+		<div class="title_box mt145">
+			<h2>理财项目专区</h2>
+		</div>
+		
+		<div class="xm_box">
+			<div class="more"><a href="javascript:;">更多>></a></div>
+			<div class="xm_list">
+				<div class="xm_title_left fl">
+					<div class="xm_icon"><img src="../../images/page/xs_icon2.png"/></div>
+					<div class="xm_title">新手专区</div> 
+				</div>
+				<div class="xm_title_right fl hiddenCon">
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="sb_box">
+			<div class="more"><a href="javascript:;">更多>></a></div>
+			<div class="xm_list">
+				<div class="xm_title_left fl">
+					<div class="xm_icon"><img src="../../images/page/sb_icon2.png"/></div>
+					<div class="xm_title">散标投资</div> 
+				</div>
+				<div class="xm_title_right fl hiddenCon">
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="zq_box">
+			<div class="more"><a href="javascript:;">更多>></a></div>
+			<div class="xm_list">
+				<div class="xm_title_left fl">
+					<div class="xm_icon"><img src="../../images/page/zq_icon2.png"/></div>
+					<div class="xm_title">债权转让</div> 
+				</div>
+				<div class="xm_title_right fl hiddenCon">
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+					
+					<div class="xm_items">
+						<h5>易赚盈-2150</h5>
+						<div class="items_list hiddenCon">
+							<ul>
+								<li>
+									<p class="i_title">年化利率</p>
+									<p class="ll_style f48">14<span class="f24">%</span></p>
+								</li>
+								<li>
+									<p class="i_title">期限</p>
+									<p class="f48 c000">14<span class="f24 c8f8">天</span></p>
+								</li>
+								<li>
+									<p class="i_title">还款方式</p>
+									<p class="font14 mtop20">按月付息<br>到期还本</p>
+								</li>
+							</ul>
+						</div>
+						<div class="kt_money">可投<span>70500</span>元|20万</div>
+						<div class="btn_style">今日20：00开抢</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="media_activity hiddenCon">
+			<div class="media fl">
+				<div class="media_header hiddenCon">
+					<p class="fl">媒体报道</p>
+					<span class="fr">更多></span>
+				</div>
+				<div class="media_content hiddenCon">
+					<div class="media_img fl"><img src="../../images/page/media_img.jpg"/></div>
+					<div class="media_list">
+						<ul>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+				<div class="media_header hiddenCon">
+					<p class="fl">平台活动</p>
+					<span class="fr">更多></span>
+				</div>
+				<div class="media_list">
+						<ul>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+							<li><p>代金券有效期调整公告</p><span>2014-02-05</span></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+		<div class="title_box mt145">
+			<h2>战略合作伙伴</h2>
+		</div>
+		
+		<div class="partner_list">
+			<ul>
+				<li><img src="../../images/page/p1.jpg"></li>
+				<li><img src="../../images/page/p2.jpg"></li>
+				<li><img src="../../images/page/p3.jpg"></li>
+				<li><img src="../../images/page/p4.jpg"></li>
+				<li><img src="../../images/page/p5.jpg"></li>
+				<li><img src="../../images/page/p6.jpg"></li>
+				<li><img src="../../images/page/p7.jpg"></li>
+				<li><img src="../../images/page/p8.jpg"></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="footer clearfix">
+	<div class="wrap1150">
+		<div class="friendlink clearfix">
+			<span class="fl mrt10">友情链接：</span>
+			<ul class="foot_linkul">
+				<li>网贷之家</li>
+				<span>|</span>
+				<li>众筹网</li>
+				<span>|</span>
+				<li>壹金融</li>
+				<span>|</span>
+				<li>拍车365</li>
+				<span>|</span>
+				<li>金融资讯</li>
+				<span>|</span>
+				<li>齐鲁股权交易中心</li>
+			</ul>
+		</div>
+		<div class="clearfix mtop40">
+			<div class="foot_custom">
+				<h1>客服电话</h1>
+				<p>400-6766-988</p>
+				<p>周一至周五 9:00-18:00</p>
+			</div>
+			<div class="foot_custom">
+				<h1>官方QQ群</h1>
+				<p>94705377</p>
+				<p>376813819</p>
+			</div>
+			<div class="foot_custom">
+				<h1>关注我们</h1>
+				<p>
+					<a href="#" target="_blank">
+						<img src="../../images/page/images_12.jpg">
+					</a>
+					<a href="#" target="_blank">
+						<img src="../../images/page/images_13.jpg" class="mlt10">
+					</a>
+				</p>
+			</div>
+			<div class="foot_navigation">
+				<ul class="clearfix">
+					<li>安全保障</li>
+					<span>|</span>
+					<li>关于我们</li>
+					<span>|</span>
+					<li>加入我们</li>
+					<span>|</span>
+					<li>联系我们</li>
+					<span>|</span>
+					<li>帮助中心</li>
+					<span>|</span>
+					<li>隐私政策</li>
+					<span>|</span>
+					<li>免费条款</li>
+					<span>|</span>
+					<li>政策法规</li>
+				</ul>
+				<p class="mtop20 textH24 clearfix">ICP备案号：京ICP备14029254号-1经营性ICP许可证号：京ICP证130046号</p>
+			</div>
+		</div>
+		<div class="textCt mtop20 clearfix">
+			<a href="#">
+				<img src="../../images/page/images_14.jpg">
+			</a>
+			<a href="#">
+				<img src="../../images/page/images_15.jpg" class="mlt20 mrt20">
+			</a>
+			<a href="#">
+				<img src="../../images/page/images_16.jpg">
+			</a>
+		</div>
+	</div>
+</div>
+
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

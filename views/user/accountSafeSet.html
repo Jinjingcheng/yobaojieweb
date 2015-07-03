@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="../../css/reset.css" />
+<link type="text/css" rel="stylesheet" href="../../css/style.css" />
+<link type="text/css" rel="stylesheet" href="../../css/account/account.css" />
+</head>
+<body>
+<div class="header">
+<div class="top_nav">
+	<a href="javascript:;" class="logo"><img src='../../images/page/logo.jpg'></a>
+	<ul>
+		<li><a href="javascript:;">首页</a></li>
+		<li><a href="javascript:;">投资列表</a></li>
+		<li><a href="javascript:;">安全保障</a></li>
+		<li><a href="javascript:;">新手指引</a></li>
+	</ul>
+	<div class="login_regis">
+		<a href="javascript:;" class="login">登录</a>
+		<a href="javascript:;" class="regis">注册</a>
+	</div>
+</div>
+</div>
+<div class="account-container clearfix">
+  <div class="main-left">
+       <div class="toptitle"><span class="fl">个人账户</span></div>
+		<div class="subNav currentDd currentDt"><span class="subimg"><img src="../../images/page/sideBar_off_03.jpg"></span>账户概况</div>
+        
+        <div class="subNav"><span class="subimg"><img src="../../images/page/sideBar_off_07.jpg"></span>理财管理</div>
+        <ul class="navContent">
+                <li><a href="#">投资项目</a></li>
+                <li><a href="#">债权转让</a></li>
+                <li><a href="#">回款计划</a></li>
+        </ul>
+        <div class="subNav"><span class="subimg"><img src="../../images/page/sideBar_off_11.jpg"></span>借款管理</div>
+        <ul class="navContent">
+                <li><a href="#">我的借款</a></li>
+                <li><a href="#">还款明细</a></li>
+                <li><a href="#">还款设置</a></li>
+        </ul>
+        <div class="subNav"><span class="subimg"><img src="../../images/page/sideBar_off_15.jpg"></span>资金管理</div>
+        <ul class="navContent">
+                <li><a href="#">充值</a></li>
+                <li><a href="#">提现</a></li>
+                <li><a href="#">资金记录</a></li>
+        </ul>
+        <div class="subNav"><span class="subimg"><img src="../../images/page/sideBar_off_25.jpg"></span>消息中心</div>
+        <div class="subNav"><span class="subimg"><img src="../../images/page/sideBar_off_28.jpg"></span>账户设置</div>
+        <ul class="navContent">
+                <li><a href="#">账户信息</a></li>
+                <li><a href="#">账户安全</a></li> 
+         </ul>
+
+  </div>
+  <div class="main-right">
+      <div class="account_set_user">
+             <div class="us1 red">
+               <span class="us_img"><img src="../../images/page/validate_on_19.jpg"></span>登录密码
+             </div>
+             <div class="us2 yes_color">
+               <p>建议定期更换密码，长度为8-20个字符的密码。</p>
+             </div>
+             <div class="us3">
+               <p class=""><a href="#" class="toModify red">修改</a></p>
+             </div>
+          </div>
+          <div id="set_rzdiv" >
+               <p><span class="width90">原登录密码</span><input type="password" /></p>
+               <p><span class="width90">新登录密码</span><input type="password" /></p>
+               <p><span class="width90">确认新密码</span><input type="password" /></p>
+               <input type="button" value="提交" class="smbtn btn mlt100">
+          </div>
+          <div class="account_set_user">
+             <div class="us1 red">
+               <span class="us_img"><img src="../../images/page/validate_on_23.jpg"></span>交易密码
+             </div>
+             <div class="us2 yes_color">
+               <p>进行投资交易时使用的密码，新注册用户的交易密码默认为登录密码</p>
+             </div>
+             <div class="us3">
+               <p><a href="#" id="logreg_btn1" class="toModify red">修改</a></p>
+             </div>
+          </div>
+          <div id="set_rzdiv" >
+               <p><span class="width90">原交易密码</span><input type="password" /></p>
+               <p><span class="width90">新交易密码</span><input type="password" /></p>
+               <p><span class="width90">确认新密码</span><input type="password" /></p>
+               <input type="button" value="提交" class="smbtn btn mlt100">
+          </div>
+          <div class="account_set_user">
+             <div class="us1">
+               <span class="us_img"><img src="../../images/page/validate_off_25.jpg"></span>手机动态验证
+             </div>
+             <div class="us2 yes_color">
+               <p>可给账户添加一层额外的保护。登录时不仅输入密码，还需输入发送到您的绑定手机中的安全代码。</p>
+             </div>
+             <div class="us3">
+               <p><a href="#" id="logreg_btn1" class="toModify">禁用</a></p>
+             </div>
+          </div>
+          <div id="set_rzdiv" >
+              <p>确认开启手机动态验证吗？
+               <input type="button" value="确认" class="smbtn btn mlt90">
+               <a href="#" class="cancelbtn mlt20">取消</a>
+              </p>
+          </div>
+          <div class="account_set_user">
+             <div class="us1">
+               <span class="us_img"><img src="../../images/page/validate_off_28.jpg"></span>登录失败通知
+             </div>
+             <div class="us2 yes_color">
+               <p>启用之后，账号多次尝试登录失败时，会发送通知短信到手机。</p>
+             </div>
+             <div class="us3">
+               <p><a href="#" id="logreg_btn1" class="toModify">禁用</a></p>
+             </div>
+          </div>
+          <div id="set_rzdiv" >
+              <p>确认开启登录失败通知吗？
+               <input type="button" value="确认" class="smbtn btn mlt90">
+               <a href="#" class="cancelbtn mlt20">取消</a>
+              </p>
+          </div>
+          <div class="account_set_user">
+             <div class="us1">
+               <span class="us_img"><img src="../../images/page/validate_off_31.jpg"></span>禁用会话保持
+             </div>
+             <div class="us2 yes_color">
+               <p>启用之后，系统不记录登录状态，当用户上一次操作完成退出浏览器后，需要重新登录。</p>
+             </div>
+             <div class="us3">
+               <p><a href="#" id="logreg_btn1" class="toModify">禁用</a></p>
+             </div>
+          </div>
+          <div id="set_rzdiv" >
+              <p>确认开启禁用会话保持吗？
+               <input type="button" value="确认" class="smbtn btn mlt90">
+               <a href="#" class="cancelbtn mlt20">取消</a>
+              </p>
+          </div>
+		  <div class="account_set_user">
+             <div class="us1">
+               <span class="us_img"><img src="../../images/page/validate_on_35.jpg"></span>登录历史
+             </div>
+             <div class="us2 yes_color">
+               <p></p>
+             </div>
+             <div class="us3">
+               <p><a href="#" id="logreg_btn1" class="toModify red">查看</a></p>
+             </div>
+          </div>
+          <div id="set_rzdiv" >
+              <table  id="accinfo_tab" class="stripe" cellpadding="0" cellspacing="1">  
+                <tr class="strong">
+                  <td>登录时间</td>
+                  <td>登录IP</td>
+                  <td>登录平台</td>
+                </tr>
+                <tr>
+                  <td>2015-07-03 11:29:23</td>
+                  <td>111.20.101.101</td>
+                  <td>网站</td>
+                </tr>
+                <tr>
+                  <td>2015-07-03 11:29:23</td>
+                  <td>111.20.101.101</td>
+                  <td>网站</td>
+                </tr>
+                <tr>
+                  <td>2015-07-03 11:29:23</td>
+                  <td>111.20.101.101</td>
+                  <td>网站</td>
+                </tr>
+                <tr>
+                  <td>2015-07-03 11:29:23</td>
+                  <td>111.20.101.101</td>
+                  <td>网站</td>
+                </tr>
+                <tr>
+                  <td>2015-07-03 11:29:23</td>
+                  <td>111.20.101.101</td>
+                  <td>网站</td>
+                </tr>
+              </table>
+          </div>          
+          
+          
+  </div>
+</div>
+<div class="footer clearfix">
+	<div class="wrap1150">
+		<div class="friendlink clearfix">
+			<span class="fl mrt10">友情链接：</span>
+			<ul class="foot_linkul">
+				<li>网贷之家</li>
+				<span>|</span>
+				<li>众筹网</li>
+				<span>|</span>
+				<li>壹金融</li>
+				<span>|</span>
+				<li>拍车365</li>
+				<span>|</span>
+				<li>金融资讯</li>
+				<span>|</span>
+				<li>齐鲁股权交易中心</li>
+			</ul>
+		</div>
+		<div class="clearfix mtop40">
+			<div class="foot_custom">
+				<h1>客服电话</h1>
+				<p>400-6766-988</p>
+				<p>周一至周五 9:00-18:00</p>
+			</div>
+			<div class="foot_custom">
+				<h1>官方QQ群</h1>
+				<p>94705377</p>
+				<p>376813819</p>
+			</div>
+			<div class="foot_custom">
+				<h1>关注我们</h1>
+				<p>
+					<a href="#" target="_blank">
+						<img src="../../images/page/images_12.jpg">
+					</a>
+					<a href="#" target="_blank">
+						<img src="../../images/page/images_13.jpg" class="mlt10">
+					</a>
+				</p>
+			</div>
+			<div class="foot_navigation">
+				<ul class="clearfix">
+					<li>安全保障</li>
+					<span>|</span>
+					<li>关于我们</li>
+					<span>|</span>
+					<li>加入我们</li>
+					<span>|</span>
+					<li>联系我们</li>
+					<span>|</span>
+					<li>帮助中心</li>
+					<span>|</span>
+					<li>隐私政策</li>
+					<span>|</span>
+					<li>免费条款</li>
+					<span>|</span>
+					<li>政策法规</li>
+				</ul>
+				<p class="mtop20 textH24 clearfix">ICP备案号：京ICP备14029254号-1经营性ICP许可证号：京ICP证130046号</p>
+			</div>
+		</div>
+		<div class="textCt mtop20 clearfix">
+			<a href="#">
+				<img src="../../images/page/images_14.jpg">
+			</a>
+			<a href="#">
+				<img src="../../images/page/images_15.jpg" class="mlt20 mrt20">
+			</a>
+			<a href="#">
+				<img src="../../images/page/images_16.jpg">
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$(".subNav").click(function(){
+	  $(this).toggleClass("currentDd").siblings(".subNav").each(function(){
+		$(this).removeClass("currentDd");
+		$(this).find("img").attr("src",$(this).find("img").attr("src").replace("_on","_off"));
+		$(this).css("color","#787878");
+	  });
+	  $(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt");
+	  $(this).find("img").attr("src",$(this).find("img").attr("src").replace("_off","_on"));
+	  $(this).next(".navContent").slideToggle(500).siblings(".navContent").slideUp(500);
+	  $(this).css("color","#ea544a");
+	})	
+})
+$(document).ready(function(){
+	$(".toModify").click(function(){
+		$(this).closest(".account_set_user").next("#set_rzdiv").slideToggle(500);
+	});	
+});
+window.onload=function()
+{
+	var addcard=document.getElementById("addcard");
+	var add_setcards=document.getElementById("add_setcards"); 
+
+	addcard.onclick=function(){
+	if(add_setcards.style.display=="block"){
+		add_setcards.style.display="none";
+	}
+	else{
+		add_setcards.style.display="block";
+	}	
+} 
+}
+$(document).ready(function(){   
+    $(".stripe tr").mouseover(function(){    
+     $(this).addClass("over");}).mouseout(function(){      
+            $(this).removeClass("over");})   
+  $(".stripe tr:even").addClass("alt");    
+  });   
+</script>
+</html>

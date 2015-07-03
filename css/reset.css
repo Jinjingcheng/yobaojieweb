@@ -1,0 +1,145 @@
+﻿@charset "utf-8";
+/* whole */
+*{margin:0; padding:0; list-style:none; text-decoration:none;}
+body,input, label, select, option, textarea, button{font-size:14px; font-family:'Microsoft YaHei'; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;padding:0;}
+	
+/* clear float */
+.clearfix:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix{*zoom:1;}
+.clear{clear:both;	height:0; font:0/0 Arial; visibility:hidden;} 
+.fl{float:left;}
+.fr{float:right;}
+
+/* a img */
+a img,img{_border:0px; *border:0px; border:0px;}
+a{text-decoration:none; color:#000; outline:none; blr:expression(this.onFocus=this.blur())}
+a:hover{text-decoration:none; cursor:pointer;}
+.udline{text-decoration:underline;}
+
+/* h1.. */
+h1{_font-size:24px;*font-size:24px; font-size:24px;}
+h2{_font-size:18px;*font-size:18px; font-size:18px;}
+h3{_font-size:15px;*font-size:15px; font-size:15px;}
+h4{_font-size:12px;*font-size:12px; font-size:12px;}
+
+/* ul ol dd */
+ul, ol, dd {list-style-type:none; margin-left:0; padding-left:0;}
+
+/* vetically  */
+img,input,select,textarea,button{vertical-align:middle;}
+
+/** font **/
+.font12{font-size:12px;}
+.font14{font-size:14px;}
+.font16{font-size:16px;}
+.font18{font-size:18px;}
+.font20{font-size:20px;}
+.font22{font-size:22px;}
+.f24{font-size:24px;}
+.f48{font-size:48px;}
+.strong{font-weight:bold;}
+
+/** display **/
+.hidden{display:none;}
+.block{display:block;}
+.inline{display:inline;}
+.inlineblock{display:inline-block;}
+
+/** text-align **/
+.textRt{text-align:right!important;}
+.textLt{text-align:left!important;}
+.textCt{text-align:center!important;}
+
+/** line-height **/
+.textH16{line-height:16px;}
+.textH20{line-height:20px;}
+.textH22{line-height:22px;}
+.textH24{line-height:24px;}
+.textH26{line-height:26px;}
+.textH28{line-height:28px;}
+.textH30{line-height:30px;}
+.textH35{line-height:35px;}
+.textInd{text-indent:2em;}
+
+.pad1{padding:1px;}
+.pad2{padding:2px;}
+.pad5{padding:5px;}
+.red{color:#ea544a;}
+.blue{color:#0066cc;}
+.green{color:#009966;}
+.Co666{color:#666666;}
+.borC{border:1px solid #ccc;}
+.hiddenCon{overflow:hidden;}
+
+/* margin */
+.mtop5{margin-top:5px;}
+.mtop10{margin-top:10px;}
+.mtop15{margin-top:15px;}
+.mtop20{margin-top:20px;}
+.mtop25{margin-top:25px;}
+.mtop30{margin-top:30px;}
+.mtop40{margin-top:40px;}
+.mtop50{margin-top:55px;}
+.mt135{margin-top:135px;}
+.mt145{margin-top:145px;}
+.mlt5{margin-left:5px;}
+.mlt10{margin-left:10px;}
+.mlt15{margin-left:15px;}
+.mlt20{margin-left:20px;}
+.mlt25{margin-left:25px;}
+.mlt30{margin-left:30px;}
+.mlt35{margin-left:35px;}
+.mlt40{margin-left:40px;}
+.mlt50{margin-left:50px;}
+.mlt80{margin-left:80px;}
+.mlt90{margin-left:90px;}
+.mlt100{margin-left:100px;}
+.mlt120{margin-left:120px;}
+.mlt130{margin-left:130px;}
+
+.mrt5{margin-right:5px;}
+.mrt10{margin-right:10px;}
+.mrt15{margin-right:15px;}
+.mrt20{margin-right:20px;}
+.mrt30{margin-right:30px;}
+.mrt50{margin-right:50px;}
+
+/* padding */
+.ptop5{padding-top:5px;}
+.ptop10{padding-top:10px;}
+.ptop15{padding-top:15px;}
+.ptop20{padding-top:20px;}
+.ptop30{padding-top:30px;}
+
+.plt5{padding-left:5px;}
+.plt10{padding-left:10px;}
+.plt15{padding-left:15px;}
+.plt20{padding-left:20px;}
+.plt30{padding-left:30px;}
+.plt50{padding-left:50px;}
+
+.prt5{padding-right:5px;}
+.prt10{padding-right:10px;}
+.prt15{padding-right:15px;}
+.prt20{padding-right:20px;}
+.prt30{padding-right:30px;}
+
+/*button*/
+.btn{display:inline-block; width:74px; height:32px; text-decoration: none; color:#ea544a; font-size:16px; border:1px solid #ee766e; text-align:center; line-height:30px; }
+.smbtn{background:#ea544a; color:#fff; cursor:pointer;}
+.xsbtn{ height:26px; line-height:24px; background:#fff; color:#ea544a; font-size:12px; cursor:pointer;}
+/*input*/
+input[type=text],input[type=password],select{ height:26px; line-height:26px; border: 1px solid #ccc; padding-left:10px;}
+input[type=text]:focus,input[type=password]:focus,textarea:focus,select:focus{
+transition:border linear .2s,box-shadow linear .5s;
+outline:none;
+border-color:rgba(38,130,188,.75);
+box-shadow:0px 0px 8px rgba(38,130,188,.5);}
+
+/* header */
+
+/* footer */
+
+/* menu */
